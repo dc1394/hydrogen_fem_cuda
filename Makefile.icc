@@ -36,7 +36,7 @@ CU = nvcc
 #
 # C++コンパイラに与える、（最適化等の）オプション
 #
-CXXFLAGS = -Wall -Wextra -O3 -xHOST -ipo -pipe -std=c++17 -qopenmp -mkl=parallel
+CXXFLAGS = -Wall -Wextra -O3 -xHOST -ipo -pipe -std=c++17 -qopenmp
 
 #
 # C++コンパイラに与える、（最適化等の）オプション
