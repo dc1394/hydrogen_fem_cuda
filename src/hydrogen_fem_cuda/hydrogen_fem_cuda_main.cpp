@@ -1,11 +1,11 @@
-﻿/*! \file hydrogen_fem_main.cpp
+﻿/*! \file hydrogen_fem_cuda_main.cpp
     \brief FEMで水素原子に対するSchrödinger方程式を解く
 
     Copyright © 2019 @dc1394 All Rights Reserved.
     This software is released under the BSD 2-Clause License.
 */
 
-#include "hydrogen_fem.h"
+#include "hydrogen_fem_cuda.h"
 #include <chrono>               // for std::chrono
 #include <iostream>             // for std::cout
 #include <boost/format.hpp>     // for boost::format

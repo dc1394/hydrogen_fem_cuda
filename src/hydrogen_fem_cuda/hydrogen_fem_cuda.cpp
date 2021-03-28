@@ -1,12 +1,12 @@
-﻿/*! \file hydrogen_fem.cpp
+﻿/*! \file hydrogen_fem_cuda.cpp
     \brief FEMで水素原子に対するSchrödinger方程式を解くクラスの実装
 
-    Copyright © 2019 @dc1394 All Rights Reserved.
+    Copyright © 2021 @dc1394 All Rights Reserved.
     (but this is originally adapted by sunsetyuhi for fem1d_poisson.py from https://github.com/sunsetyuhi/fem_py/blob/master/fem1d_poisson )
     This software is released under the BSD 2-Clause License.
 */
 
-#include "hydrogen_fem.h"
+#include "hydrogen_fem_cuda.h"
 #include "sygvd_cuda.h"
 #include <cmath>                // for std::exp
 #include <cstdio>               // for FILE, std::fclose, std::fopen, std::fprintf 

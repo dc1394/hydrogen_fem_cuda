@@ -1,22 +1,22 @@
 #
 # プログラム名
 #
-PROG = hydrogen_fem
+PROG = hydrogen_fem_cuda
 
 #
 # ソースコードが存在する相対パス
 #
-VPATH = src/hydrogen_fem
+VPATH = src/hydrogen_fem_cuda
 
 #
 # コンパイル対象のソースファイル群
 #
-SRCS := hydrogen_fem_main.cpp hydrogen_fem.cpp sygvd_cuda.cu 
+SRCS := hydrogen_fem_cuda_main.cpp hydrogen_fem_cuda.cpp sygvd_cuda.cu 
 
 #
 # ターゲットファイルを生成するために利用するオブジェクトファイル
 #
-OBJS := hydrogen_fem_main.o hydrogen_fem.o sygvd_cuda.o
+OBJS := hydrogen_fem_cuda_main.o hydrogen_fem_cuda.o sygvd_cuda.o
 
 #
 # *.cppファイルの依存関係が書かれた*.dファイル

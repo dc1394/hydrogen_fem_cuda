@@ -1,7 +1,7 @@
-﻿/*! \file hydrogen_fem.h
+﻿/*! \file hydrogen_fem_cuda.h
     \brief FEMで水素原子に対するSchrödinger方程式を解くクラスの宣言
 
-    Copyright © 2019 @dc1394 All Rights Reserved.
+    Copyright © 2021 @dc1394 All Rights Reserved.
     This software is released under the BSD 2-Clause License.    
 */
 
