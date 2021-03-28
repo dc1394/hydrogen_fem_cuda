@@ -1,22 +1,24 @@
 ﻿================================================================================
-【 ソフト名 】hydrogen_fem
+【 ソフト名 】hydrogen_fem_cuda
 【  作成者  】@dc1394
 ================================================================================
 
 ★これは何？
-　FEMで水素原子に対するSchrödinger方程式を解くことにより、基底状態のエネルギー固
-　有値を求めるコードです。ビルドには以下のライブラリが必要です。
+　FEMで水素原子に対するSchrödinger方程式を解くことにより、エネルギー固有値と基底
+　状態の波動関数を求めるコードです（CUDA使用版）。ビルドには以下のライブラリが必
+　要です。
 　・Boost C++ Libraries
 　・Eigen
+　・CUDA
 
 ★更新履歴
-　2019/11/4 ver.1.0   README.mdを書いて公開。
+　2021/3/28 ver.1.0   README.mdを書いて公開。
 
 ★ライセンス
 　このソフトはフリーソフトウェアです（2条項BSDライセンス）。
 --------------------------------------------------------------------------------
-　hydrogen_fem
-　Copyright (C) 2019 @dc1394
+　hydrogen_fem_cuda
+　Copyright (C) 2021 @dc1394
 
 　ソースコード形式であれバイナリ形式であれ、変更の有無に関わらず、以下の条件を満
 　たす限りにおいて、再配布および利用を許可します。
@@ -62,8 +64,8 @@
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
 
-  hydrogen_femにはBoostコミュニティによるBoost C++ Librariesを使用しています。こ
-  ちらのライセンスは Boostライセンス になります。
+  hydrogen_fem_cudaにはBoostコミュニティによるBoost C++ Librariesを使用していま
+  す。こちらのライセンスは Boostライセンス になります。
 
 /* Boost Software License - Version 1.0 - August 17th, 2003
 *
@@ -90,5 +92,5 @@
 * DEALINGS IN THE SOFTWARE.
 */
 
-　hydrogen_femにはEigen projectによるEigenを使用しています。こちらのライセンスは
-　MPL2になります。
+　hydrogen_fem_cudaにはEigen projectによるEigenを使用しています。こちらのライ
+　センスはMPL2になります。
