@@ -18,7 +18,7 @@ namespace cuda {
         cudaError_t cudaStat2 = cudaSuccess;
         cudaError_t cudaStat3 = cudaSuccess;
         cudaError_t cudaStat4 = cudaSuccess;
-        const int lda = m;
+        std::int32_t const lda = m;
 
         std::vector<float> V(lda*m); // eigenvectors
         std::vector<float> W(m); // eigenvalues
@@ -26,10 +26,10 @@ namespace cuda {
         float *d_A = nullptr;
         float *d_B = nullptr;
         float *d_W = nullptr;
-        int *devInfo = nullptr;
+        std::int32_t *devInfo = nullptr;
         float *d_work = nullptr;
-        int  lwork = 0;
-        int info_gpu = 0;
+        std::int32_t  lwork = 0;
+        std::int32_t info_gpu = 0;
     
         // step 1: create cusolver/cublas handle
         cusolver_status = cusolverDnCreate(&cusolverH);
@@ -39,7 +39,7 @@ namespace cuda {
         cudaStat1 = cudaMalloc ((void**)&d_A, sizeof(float) * lda * m);
         cudaStat2 = cudaMalloc ((void**)&d_B, sizeof(float) * lda * m);
         cudaStat3 = cudaMalloc ((void**)&d_W, sizeof(float) * m);
-        cudaStat4 = cudaMalloc ((void**)&devInfo, sizeof(int));
+        cudaStat4 = cudaMalloc ((void**)&devInfo, sizeof(std::int32_t));
         assert(cudaSuccess == cudaStat1);
         assert(cudaSuccess == cudaStat2);
         assert(cudaSuccess == cudaStat3);
@@ -91,7 +91,7 @@ namespace cuda {
     
         cudaStat1 = cudaMemcpy(W.data(), d_W, sizeof(float)*m, cudaMemcpyDeviceToHost);
         cudaStat2 = cudaMemcpy(V.data(), d_A, sizeof(float)*lda*m, cudaMemcpyDeviceToHost);
-        cudaStat3 = cudaMemcpy(&info_gpu, devInfo, sizeof(int), cudaMemcpyDeviceToHost);
+        cudaStat3 = cudaMemcpy(&info_gpu, devInfo, sizeof(std::int32_t), cudaMemcpyDeviceToHost);
         assert(cudaSuccess == cudaStat1);
         assert(cudaSuccess == cudaStat2);
         assert(cudaSuccess == cudaStat3);
